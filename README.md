@@ -1,9 +1,11 @@
-
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Fitness Interactive Tracker</title>
+<title>FitLife Student Fitness Tracker</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
 <style>
 
@@ -11,25 +13,25 @@
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:Arial;
+font-family:"Poppins", Arial, sans-serif;
 }
 
 body{
-background:#111;
-color:white;
+background:#ffe6f2;
+color:#333;
 }
 
 /* NAV */
 
 header{
-background:#000;
+background:#ff4da6;
 padding:20px 10%;
 display:flex;
 justify-content:space-between;
 }
 
 .logo{
-color:#00ffae;
+color:white;
 font-size:24px;
 font-weight:bold;
 }
@@ -38,10 +40,11 @@ nav a{
 color:white;
 margin-left:20px;
 text-decoration:none;
+font-weight:500;
 }
 
 nav a:hover{
-color:#00ffae;
+color:#ffd6eb;
 }
 
 /* HERO */
@@ -52,9 +55,10 @@ display:flex;
 align-items:center;
 justify-content:center;
 text-align:center;
-background:linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)),
+background:linear-gradient(rgba(255,77,166,.6),rgba(255,77,166,.6)),
 url("https://images.unsplash.com/photo-1554284126-aa88f22d8b74");
 background-size:cover;
+color:white;
 }
 
 .hero h1{
@@ -70,7 +74,7 @@ padding:70px 10%;
 .section-title{
 text-align:center;
 margin-bottom:40px;
-color:#00ffae;
+color:#ff4da6;
 }
 
 /* CARDS */
@@ -82,38 +86,51 @@ gap:25px;
 }
 
 .card{
-background:#1a1a1a;
+background:white;
 padding:25px;
-border-radius:10px;
+border-radius:12px;
 text-align:center;
+box-shadow:0 4px 12px rgba(0,0,0,0.1);
 }
 
-/* BMI */
+/* BOX */
 
 .box{
 max-width:400px;
 margin:auto;
-background:#1a1a1a;
+background:white;
 padding:25px;
-border-radius:10px;
+border-radius:12px;
 text-align:center;
+box-shadow:0 4px 12px rgba(0,0,0,0.1);
 }
+
+/* INPUT */
 
 input,select{
 width:100%;
 padding:10px;
 margin:10px 0;
-border:none;
-border-radius:5px;
+border:1px solid #ffd6eb;
+border-radius:6px;
 }
 
+/* BUTTON */
+
 button{
-background:#00ffae;
+background:#ff4da6;
+color:white;
 border:none;
 padding:12px;
 font-weight:bold;
 cursor:pointer;
 width:100%;
+border-radius:6px;
+transition:0.3s;
+}
+
+button:hover{
+background:#ff1a8c;
 }
 
 .result{
@@ -121,40 +138,43 @@ margin-top:15px;
 font-size:18px;
 }
 
-/* AI BOT */
+/* CHATBOT */
 
 .chatbox{
 max-width:500px;
 margin:auto;
-background:#1a1a1a;
+background:white;
 padding:20px;
-border-radius:10px;
+border-radius:12px;
+box-shadow:0 4px 12px rgba(0,0,0,0.1);
 }
 
 .chat{
 height:200px;
 overflow-y:auto;
-background:#000;
+background:#ffe6f2;
 padding:10px;
 margin-bottom:10px;
-border-radius:5px;
+border-radius:6px;
 font-size:14px;
 }
 
 .user{
-color:#00ffae;
+color:#ff1a8c;
+font-weight:bold;
 }
 
 .bot{
-color:#fff;
+color:#444;
 }
 
 /* FOOTER */
 
 footer{
-background:#000;
+background:#ff4da6;
 text-align:center;
 padding:20px;
+color:white;
 }
 
 </style>
@@ -179,8 +199,8 @@ padding:20px;
 <section class="hero">
 
 <div>
-<h1>Train Smart. Get Strong.</h1>
-<p>Your digital fitness assistant</p>
+<h1>Train Smart. Stay Healthy.</h1>
+<p>Your student-friendly fitness assistant</p>
 </div>
 
 </section>
@@ -257,7 +277,7 @@ padding:20px;
 
 <footer>
 
-<p>© 2026 FitLife Fitness</p>
+<p>© 2026 FitLife Student Fitness</p>
 
 </footer>
 
@@ -349,7 +369,7 @@ else if(input.includes("exercise"))
 reply="Push ups, squats and planks are great beginner exercises."
 
 else if(input.includes("fitness"))
-reply="Physical fitness is defined as the body's ability to function efficiently, combining strength, endurance, and cardiovascular health to perform daily activities with minimal fatigue."
+reply="Fitness means keeping your body strong, healthy, and active."
 
 else
 reply="Stay consistent with workouts and maintain healthy habits."
@@ -366,3 +386,4 @@ chat.scrollTop=chat.scrollHeight
 
 </body>
 </html>
+```
